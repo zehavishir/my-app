@@ -1,5 +1,15 @@
+#header{
+    position: absolute;
+    height: 10%;
+    width: 98%;
+}
+
 #mainContent{
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     gap: 2vw;
+    height: 70%;
+    top: 12%;
+    width: 98%;
 }

@@ -9,8 +9,8 @@ export interface Job {
     jobGeo: string;
     jobIndustry: string[];//
     jobLevel:string;//
-    jobSlug: string;//
-    jobTitle: string;//
+    jobSlug: string;
+    jobTitle: string;
     jobType: string[];
     pubDate: string[];//
     salaryCurrency: string;
