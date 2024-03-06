@@ -6,6 +6,7 @@ import {ReactiveFormsModule} from '@angular/forms'
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import { SingleJobHuntingComponent } from 'src/shared/single-job-hunting/single-job-hunting.component';
+import { PipesModule } from 'src/pipes/pipes.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { SingleJobHuntingComponent } from 'src/shared/single-job-hunting/single-
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

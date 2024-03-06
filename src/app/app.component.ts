@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
     }
   ngOnInit(): void {
     this.http.get<Data>('https://jobicy.com/api/v2/remote-jobs?count=20&geo=usa&industry=marketing&tag=seo').subscribe((response : Data) => {
+      // console.log(response.jobs.map((x: Job) => x.salaryCurrency));
       console.log(response.jobs);
       this.JobsArray = response.jobs;
     });

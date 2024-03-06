@@ -1,4 +1,22 @@
-<div>{{job.jobGeo}}</div>
 <div id="cube">
-    
+    <div id="header">
+        <span>name: {{Job.companyName.replace('&#038;#038;','&')}}</span>
+        <img id="jobLogo" src="{{Job.companyLogo}}">
+    </div>
+    <div>Salary: </div>
+    <div *ngIf="Job.annualSalaryMin; else NoSalaryShown" style="color:black">{{Job.annualSalaryMin}}{{Job.salaryCurrency | currencyConverter}} - {{Job.annualSalaryMax}}{{Job.salaryCurrency | currencyConverter}} a year</div>
+    <ng-template #NoSalaryShown>no salary shown</ng-template>
+    <div>{{Description.replaceAll('&#038;amp;', '&')}}</div>
+    <div>
+        <div>learn more here:
+            <a href="{{Job.url}}">website</a>
+        </div>
+    <div style="display: flex">
+        <img src="../../assets/icons/location.svg">
+        <span>{{Job.jobGeo}}</span>
+    </div>
+    <div>job type: {{Job.jobType[0] | symbolsConverter: '&amp;'}}</div>
+    <div>job title: {{Job.jobTitle }}</div>
+    <div>job level: {{Job.jobLevel }}</div>
+    <div>job industry: {{Job.jobIndustry[0].replace('&#038;amp;', '&')}}</div>
 </div>

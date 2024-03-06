@@ -1,7 +1,18 @@
 #cube {
     height: 30vh;
-    width: 30vw;
+    width: 43vw;
     border: 1px solid var(--dark-blue);
     border-radius: 8px;
+    padding: 2vw;
+}
 
+#header {
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+#jobLogo {
+    width: 3vw;
 }

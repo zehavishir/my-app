@@ -7,12 +7,12 @@ export interface Job {
     jobDescription: string;
     jobExcerpt: string;
     jobGeo: string;
-    jobIndustry: string[];
-    jobLevel:string;
-    jobSlug: string;
-    jobTitle: string;
+    jobIndustry: string[];//
+    jobLevel:string;//
+    jobSlug: string;//
+    jobTitle: string;//
     jobType: string[];
-    pubDate: string[];
+    pubDate: string[];//
     salaryCurrency: string;
     url: string;
   }

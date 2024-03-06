@@ -6,10 +6,16 @@ import { Job } from 'src/interfaces/job.interface';
   styleUrls: ['./single-job-hunting.component.scss']
 })
 export class SingleJobHuntingComponent {
-  @Input() job: Job;
+  //לעשות סינון לפי?
+  @Input() set job(job: Job) {
+    this.Description = job.jobExcerpt.replace('&#8230;','...');
+    this.Job = job;
+  };
   public Description: string;
+  public Job: Job;
   constructor() {
-    this.job = {} as Job;
-    this.Description = this.job.jobDescription;
+    this.Job = {} as Job;
+    this.Description = '';
+    // this.Description = this.job.jobDescription;
   }
 }
