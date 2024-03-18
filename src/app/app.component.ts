@@ -4,34 +4,7 @@ import {FormGroup,ValidatorFn, FormControl,Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Job } from 'src/interfaces/job.interface';
 import { Data } from 'src/interfaces/data.interface';
-// export interface Data {
-//   apiVersion: string;
-//   clientKey: string;
-//   documentationUrl: string;
-//   friendlyNotice: string;
-//   jobCount: number;
-//   jobs: Job[];
-//   lastUpdate: string;
-//   xRayHash: string;
-// } 
-// export interface Job {
-//   annualSalaryMax: string;
-//   annualSalaryMin: string;
-//   companyLogo: string;
-//   companyName: string;
-//   id: number;
-//   jobDescription: string;
-//   jobExcerpt: string;
-//   jobGeo: string;
-//   jobIndustry: string[];
-//   jobLevel:string;
-//   jobSlug: string;
-//   jobTitle: string;
-//   jobType: string[];
-//   pubDate: string[];
-//   salaryCurrency: string;
-//   url: string;
-// }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -39,17 +12,16 @@ import { Data } from 'src/interfaces/data.interface';
 })
 export class AppComponent implements OnInit {
   title = 'my-app';
-  public JobsArray: Job[];
 
   constructor(private http: HttpClient){
-    this.JobsArray = [];
+    // this.JobsArray = [];
     }
   ngOnInit(): void {
-    this.http.get<Data>('https://jobicy.com/api/v2/remote-jobs?count=20&geo=usa&industry=marketing&tag=seo').subscribe((response : Data) => {
-      // console.log(response.jobs.map((x: Job) => x.salaryCurrency));
-      console.log(response.jobs);
-      this.JobsArray = response.jobs;
-    });
+    // this.http.get<Data>('https://jobicy.com/api/v2/remote-jobs?count=20&geo=usa&industry=marketing&tag=seo').subscribe((response : Data) => {
+    //   // console.log(response.jobs.map((x: Job) => x.salaryCurrency));
+    //   console.log(response.jobs);
+    //   this.JobsArray = response.jobs;
+    // });
   }
 
   //TODO:

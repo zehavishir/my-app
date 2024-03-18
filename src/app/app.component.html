@@ -1,4 +1,12 @@
-<app-main-window-header id="header"></app-main-window-header>
-<div id="mainContent">
-  <app-single-job-hunting *ngFor="let item of JobsArray" [job]="item"></app-single-job-hunting>
+<!-- <div id="fullScreen">
+  <app-main-window-header id="header"></app-main-window-header>
+  <div>
+    <app-main-window-sidebar id="sidebar"></app-main-window-sidebar>
+    <div id="mainContent">
+      <app-single-job-hunting *ngFor="let item of JobsArray" [job]="item"></app-single-job-hunting>
+    </div>
+  </div>
+</div> -->
+<div>
+  <router-outlet></router-outlet>
 </div>

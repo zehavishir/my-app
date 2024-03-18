@@ -1,0 +1,31 @@
+#fullScreen{
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+#header{
+    position: absolute;
+    height: 30%;
+    width: 98%;
+}
+
+#content {
+    position: absolute;
+    top: 30%;
+    height: 70%;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#mainContent{
+    // position: absolute;
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    gap: 2vw;
+    align-items: center;
+    // height: 70%;
+    // top: 12%;
+    // width: 98%;
+}

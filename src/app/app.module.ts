@@ -5,14 +5,18 @@ import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms'
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
-import { SingleJobHuntingComponent } from 'src/shared/single-job-hunting/single-job-hunting.component';
+// import { SingleJobHuntingComponent } from 'src/shared/single-job-hunting/component/single-job-hunting.component';
+// import { SingleJobHuntingModule } from 'src/shared/single-job-hunting/single-job-hunting.module';
 import { PipesModule } from 'src/pipes/pipes.module';
-import { MainWindowHeaderComponent } from 'src/main-window-header/main-window-header.component';
+// import { MainWindowHeaderComponent } from 'src/main-window/layout/main-window-header/main-window-header.component';
+// import { MainWindowSidebarComponent } from 'src/main-window/layout/main-window-sidebar/main-window-sidebar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MainWindowModule } from 'src/main-window/main-window.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SingleJobHuntingComponent,
-    MainWindowHeaderComponent
+    // MainWindowHeaderComponent,
+    // MainWindowSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,9 @@ import { MainWindowHeaderComponent } from 'src/main-window-header/main-window-he
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
-    PipesModule
+    MainWindowModule,
+    // SingleJobHuntingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
