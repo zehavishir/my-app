@@ -1,7 +1,7 @@
 <app-main-window-header id="header"></app-main-window-header>
 <div id="content">
-    <app-main-window-sidebar id="sidebar"></app-main-window-sidebar>
+    <app-main-window-sidebar (OnClick)="OnClick($event)" [JobsToDisplay]="JobsArray" id="sidebar"></app-main-window-sidebar>
     <div id="mainContent">
-        <app-single-job-hunting *ngFor="let item of JobsArray" [job]="item"></app-single-job-hunting>
+        <app-single-job-hunting *ngFor="let item of JobsToDisplay" [job]="item"></app-single-job-hunting>
     </div>
 </div>
